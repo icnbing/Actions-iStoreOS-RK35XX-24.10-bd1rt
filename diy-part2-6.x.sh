@@ -54,7 +54,7 @@ echo -e "\\ndefine Device/bd_1rt
   DEVICE_VENDOR := BD
   DEVICE_MODEL := 1RT
   DEVICE_DTS := rk3568/rk3568-bd-1rt
-  DEVICE_PACKAGES += kmod-nvme kmod-ata-ahci-dwc kmod-hwmon-pwmfan kmod-thermal kmod-switch-rtl8306 kmod-switch-rtl8366-smi kmod-switch-rtl8366rb kmod-switch-rtl8366s kmod-switch-rtl8367b swconfig kmod-swconfig kmod-r8169 kmod-mt7615-firmware
+  DEVICE_PACKAGES += kmod-nvme kmod-ata-ahci-dwc kmod-hwmon-pwmfan kmod-thermal kmod-switch-rtl8366s kmod-switch-rtl8367 kmod-switch-rtl8367b swconfig kmod-swconfig
 endef
 TARGET_DEVICES += bd_1rt" >> target/linux/rockchip/image/legacy.mk
 
@@ -75,8 +75,8 @@ chmod 755 package/base-files/files/etc/init.d/swconfig_install
 
 
 # rtl8367b驱动资源包，暂时使用这样替换
-#wget https://github.com/xiaomeng9597/files/releases/download/files/rtl8367b.tar.gz
-#tar -xvf rtl8367b.tar.gz
+wget https://github.com/xiaomeng9597/files/releases/download/files/rtl8367b.tar.gz
+tar -xvf rtl8367b.tar.gz
 
 
 # 复制dts设备树文件到指定目录下
