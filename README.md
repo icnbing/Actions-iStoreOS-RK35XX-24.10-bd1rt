@@ -19,35 +19,12 @@
 
 ## 支持架构
 
-### RK33xx 架构
-
-| 设备       | 包名称                                                                    |
-| ---------- | ------------------------------------------------------------------------- |
-| R2S        | istoreos-rockchip-armv8-friendlyarm_nanopi-r2s-squashfs-sysupgrade.img.gz |
-| R4S        | istoreos-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz |
-| R4SE       | istoreos-rockchip-armv8-friendlyarm_nanopi-r4se-squashfs-sysupgrade.img.gz |
-| ROCK-PI-4A | istoreos-rockchip-armv8-radxa_rock-pi-squashfs-sysupgrade.img.gz  |
-| ROCKPRO64  | istoreos-rockchip-armv8-pine64_rockpro64-squashfs-sysupgrade.img.gz  |
-
 ### ARMv8/RK35xx 架构
 
 | 设备           | 包名称                                                                   |
 | -------------- | ------------------------------------------------------------------------ |
-| H66K/H68K/H69K | istoreos-rockchip-armv8-hinlink_opc-h6xk-squashfs-sysupgrade.img.gz       |
-| H88K           | istoreos-rockchip-armv8-hinlink_h88k-squashfs-sysupgrade.img.gz           |
-| NANOPI-R5S     | istoreos-rockchip-armv8-friendlyarm_nanopi-r5s-squashfs-sysupgrade.img.gz |
-| NANOPI-R6S     | istoreos-rockchip-armv8-friendlyarm_nanopi-r6s-squashfs-sysupgrade.img.gz |
-| R66S/R68S      | istoreos-rockchip-armv8-fastrhino_r6xs-squashfs-sysupgrade.img.gz         |
-| STATION-P2     | istoreos-rockchip-armv8-firefly_station-p2-squashfs-sysupgrade.img.gz     |
-| T68M     | istoreos-rockchip-armv8-lyt_t68m-squashfs-sysupgrade.img.gz     |
-| Orange-Pi-5-Plus     | istoreos-rockchip-armv8-xunlong_orangepi-5-plus-squashfs-sysupgrade.img.gz     |
+| bendian one     | istoreos-rockchip-armv8-bd-1rt-squashfs-sysupgrade.img.gz     |
 
-### x86 架构
-
-| 启动       | 包名称                                              |
-| ---------- | --------------------------------------------------- |
-| X86-64     | istoreos-x86-64-generic-squashfs-combined.img.gz    |
-| X86-64-EFI | storeos-x86-64-generic-squashfs-combined-efi.img.gz |
 
 ## 鸣谢
 
