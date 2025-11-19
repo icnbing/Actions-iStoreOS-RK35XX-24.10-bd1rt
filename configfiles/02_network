@@ -40,13 +40,10 @@ rockchip_setup_interfaces()
 		ucidef_set_interfaces_lan_wan 'eth0' 'eth1'
 		;;
 	nsy,g68-plus|\
-	bdy,g18-pro)
+	bdy,g18-pro|\
+	bd,1rt)
 		ucidef_add_switch "switch0" \
 			"0:lan" "1:lan" "2:lan" "3:lan" "4:wan" "7t@eth0"
-		;;
-	nsy,g16-plus)
-		ucidef_add_switch "switch0" \
-			"1:lan" "2:lan" "3:lan" "0:wan" "7t@eth0"
 		;;
 	hinlink,h88k-v3|\
 	hinlink,opc-h69k|\
@@ -111,6 +108,7 @@ rockchip_setup_macs()
 	nsy,g68-plus|\
 	nsy,g16-plus|\
 	bdy,g18-pro|\
+	bd,1rt|\
 	friendlyarm,nanopc-t6)
 		wan_mac=$(macaddr_generate_from_mmc_cid mmcblk0)
 		lan_mac=$(macaddr_add "$wan_mac" 1)
