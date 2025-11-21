@@ -46,7 +46,7 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-a
 #   DEVICE_DTS := rk3568/rk3568-bdy-g18-pro
 #   DEVICE_PACKAGES += kmod-nvme kmod-ata-ahci-dwc kmod-hwmon-pwmfan kmod-thermal kmod-switch-rtl8306 kmod-switch-rtl8366-smi kmod-switch-rtl8366rb kmod-switch-rtl8366s kmod-switch-rtl8367b swconfig kmod-swconfig kmod-r8169 kmod-mt7615-firmware
 # endef
-# TARGET_DEVICES += bdy_g18-pro" >> target/linux/rockchip/image/legacy.mk
+# TARGET_DEVICES += bdy_g18-pro" > target/linux/rockchip/image/legacy.mk
 
 #增加bd_1rt
 echo -e "\\ndefine Device/bd_1rt
