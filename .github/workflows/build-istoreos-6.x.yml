@@ -121,8 +121,7 @@ jobs:
 
     - name: 安装 feeds
       run: cd openwrt && ./scripts/feeds install -a
-      run: cd openwrt && ./scripts/feeds install libev attr libtirpc libpam luci-theme-argon liblzma libnetsnmp curl luci-lua-runtime luci-base/host csstidy/host luasrcdiet/host libgcrypt
-
+      
     - name: 加载自定义配置
       env:
         CONFIG_FILE_PATH: ${{ matrix.ARCHITECTURE }}/${{ env.CONFIG_FILE }}
