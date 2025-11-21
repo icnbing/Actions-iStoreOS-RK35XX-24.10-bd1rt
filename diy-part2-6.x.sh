@@ -58,6 +58,8 @@ echo -e "\\ndefine Device/bd_1rt
 endef
 TARGET_DEVICES += bd_1rt" > target/linux/rockchip/image/legacy.mk
 
+#增加对RTL8211F、RLT8367S支持
+#cp -f target/linux/generic/pending-6.6/721-net-phy-realtek-support-combo-mode-for-RTL8211FS.patch target/linux/generic/hack-6.6/721-net-phy-realtek-support-combo-mode-for-RTL8211FS.patch
 
 # 复制 02_network 网络配置文件到 target/linux/rockchip/armv8/base-files/etc/board.d/ 目录下
 rm -f target/linux/rockchip/armv8/base-files/etc/board.d/02_network
