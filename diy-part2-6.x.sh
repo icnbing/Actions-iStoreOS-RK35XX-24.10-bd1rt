@@ -36,6 +36,8 @@ git clone --depth=1 -b main https://github.com/xiaomeng9597/istoreos-settings pa
 # 定时限速插件
 git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
 
+#修复'LingTiGameAcc', which does not exist
+#git clone https://github.com/example/lingtigameacc.git package/feeds/third_party/lingtigameacc
 
 
 # 增加bdy_g18-pro
