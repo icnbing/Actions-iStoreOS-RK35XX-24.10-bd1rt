@@ -118,12 +118,12 @@ jobs:
 
     - name: 更新 feeds
       run: cd openwrt && ./scripts/feeds update -a
+      
+    - name: 解决依赖报错
+      run: cd openwrt && ./scripts/feeds install libev attr libtirpc libpam luci-theme-argon liblzma libnetsnmp curl luci-lua-runtime luci-base csstidy luasrcdiet libgcrypt
 
     - name: 安装 feeds
       run: cd openwrt && ./scripts/feeds install -a
-      
-    - name: 解决依赖报错
-      run: cd openwrt && ./scripts/feeds install libev attr libtirpc libpam luci-theme-argon liblzma libnetsnmp curl luci-lua-runtime luci-base/host csstidy/host luasrcdiet/host libgcrypt
 
     - name: 加载自定义配置
       env:
