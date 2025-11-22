@@ -34,7 +34,7 @@ git clone --depth=1 -b main https://github.com/xiaomeng9597/istoreos-settings pa
 
 
 # 定时限速插件
-git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
+#git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
 
 #修复'LingTiGameAcc', which does not exist
 #git clone https://github.com/example/lingtigameacc.git package/feeds/third_party/lingtigameacc
@@ -79,8 +79,8 @@ chmod 755 package/base-files/files/etc/init.d/swconfig_install
 
 
 # rtl8367b驱动资源包，暂时使用这样替换
-wget https://github.com/xiaomeng9597/files/releases/download/files/rtl8367b.tar.gz
-tar -xvf rtl8367b.tar.gz
+#wget https://github.com/xiaomeng9597/files/releases/download/files/rtl8367b.tar.gz
+#tar -xvf rtl8367b.tar.gz
 
 
 # 复制dts设备树文件到指定目录下
