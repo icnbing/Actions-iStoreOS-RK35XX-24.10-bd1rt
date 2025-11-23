@@ -7,14 +7,14 @@
 # Blog: https://p3terx.com
 #===============================================
 
-# 修改uhttpd配置文件，启用nginx
-# # sed -i "/.*uhttpd.*/d" .config
-# # sed -i '/.*\/etc\/init.d.*/d' package/network/services/uhttpd/Makefile
-# # sed -i '/.*.\/files\/uhttpd.init.*/d' package/network/services/uhttpd/Makefile
-# sed -i "s/:80/:81/g" package/network/services/uhttpd/files/uhttpd.config
-# sed -i "s/:443/:4443/g" package/network/services/uhttpd/files/uhttpd.config
-# cp -a $GITHUB_WORKSPACE/configfiles/etc/* package/base-files/files/etc/
-# # ls package/base-files/files/etc/
+修改uhttpd配置文件，启用nginx
+# sed -i "/.*uhttpd.*/d" .config
+# sed -i '/.*\/etc\/init.d.*/d' package/network/services/uhttpd/Makefile
+# sed -i '/.*.\/files\/uhttpd.init.*/d' package/network/services/uhttpd/Makefile
+sed -i "s/:80/:81/g" package/network/services/uhttpd/files/uhttpd.config
+sed -i "s/:443/:4443/g" package/network/services/uhttpd/files/uhttpd.config
+cp -a $GITHUB_WORKSPACE/configfiles/etc/* package/base-files/files/etc/
+# ls package/base-files/files/etc/
 
 
 # 追加binder内核参数
@@ -53,12 +53,15 @@ git clone --depth=1 -b main https://github.com/xiaomeng9597/istoreos-settings pa
 #增加bd_1rt
 echo -e "\\ndefine Device/bd_1rt
 \$(call Device/Legacy/rk3568,\$(1))
+  SOC := rk3568
+  UBOOT_DEVICE_NAME := bd1rt-rk3568
+  BOOT_SCRIPT := rk3568
   DEVICE_VENDOR := BD
   DEVICE_MODEL := 1RT
   DEVICE_DTS := rk3568/rk3568-bd-1rt
-  DEVICE_PACKAGES += kmod-nvme kmod-ata-ahci-dwc kmod-hwmon-pwmfan kmod-thermal kmod-switch-rtl8366s kmod-switch-rtl8367 kmod-switch-rtl8367b swconfig kmod-swconfig
+  DEVICE_PACKAGES := kmod-rga3 kmod-rk_vcodec kmod-rkgpu-bifrost kmod-rknpu kmod-iio-rockchip-saradc kmod-nvme kmod-ata-ahci-dwc kmod-hwmon-pwmfan kmod-thermal kmod-switch-rtl8366s kmod-switch-rtl8367 kmod-switch-rtl8367b swconfig kmod-swconfig
 endef
-TARGET_DEVICES += bd_1rt" > target/linux/rockchip/image/legacy.mk
+TARGET_DEVICES += bd_1rt" >> target/linux/rockchip/image/legacy.mk
 
 #增加对RTL8211F、RLT8367S支持
 #mv target/linux/generic/pending-6.6/721-net-phy-realtek-support-combo-mode-for-RTL8211FS.patch target/linux/generic/hack-6.6/721-net-phy-realtek-support-combo-mode-for-RTL8211FS.patch
